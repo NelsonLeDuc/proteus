@@ -1,0 +1,147 @@
+import Foundation
+
+'' The namespace for the file. All file-level classes and funcs will be
+'' prefixed with this value, but uppercased.
+namespace pt
+
+' Easy way to refer to different types by a better name.
+typedef Int Number<Int32>
+
+' Note that all functions actually only take a single parameter.
+' This is `main` taking a single tuple parameter.
+' Also, all `func` definitions will be translated into blocks.
+' Finally, `main` is treated special and will be renamed to
+' `_ptmain` and `int main(...)` will simply call into this func.
+func main (args :: [NString]) -> Int:
+    let retval :=
+        if args.count == 0:
+            for (idx, arg) in args:
+                println("\(idx + 1). \(arg)")
+
+            break 0
+        else:
+            break -1
+            
+    return retval
+
+' All classes derive from `NSObject` by default. Use the `derives <class>` syntax
+' to subclass differently. Also, use `implements <type>, <type>, ...` for protocols.
+interface Person:
+    ' The `let` keyword creates readonly properties.
+    let firstName :: NSString
+    let lastName :: NSString
+    
+    ' The `var` keyword creates read/write properties.
+    ' The `[copy]` is the attribute applied to the property, in this case
+    ' all writes to `emailAddress` will create a copy of the incoming value.
+    var emailAddress :: NSString [copy]
+    
+    ' Classes have "messages handlers", not functions (which are really just blocks).
+    
+    ' initializer with parameters, defaults to returning `instancetype` in ObjC
+    def initWithFirstName::NSString lastName::NSString:
+        _firstName = firstName      ' Initial thought is that the initializer is the _only_ place
+        _lastName = lastName        ' where the `_` field reference will be legal.
+    
+    ' a message name with a single parameter, defaults to returning `void` in ObjC
+    def say message::NSString:
+        log("\(firstName) says \"\(message)\"")
+        
+    ' A simple message that returns a `NSString`
+    def fullName -> NSString:
+        return "\(firstName) \(lastName)"
+        
+
+let david := [[Person alloc] initWithFirstName:"David" lastName:"Owens"]
+david.friendlyName := "david@owensd.io"
+
+[david say:"Is this better?"]
+
+' Curried function support.
+func sum x::Int -> y::Int -> Int
+    return x + y
+    
+let sum1 :: Int -> Int := sum(1)         ' partial function application
+let sum2 :: Int := sum1(2)
+let full :: Int := sum(3)(4)
+log("sum of 1 + 2 = \(sum2)")
+
+' Handle the standard NSError handling.
+' All class-types get initialized to `nil` by default.
+var error :: NSError
+let string := [NSString stringWithContentsOfFile:"path_to_file" encoding:NSStringEncoding.UTF8 error:&error]
+if string == nil:
+    log("Failed creating string from file: \(error)")
+else:
+    log("String is valid: \(string.value)")
+    
+try:
+    let items := [1, 2, 3]
+    let x := items.removeObjectAtIndex(10)
+    
+' The exception value is always stored as `exception`.
+catch NSException:
+    log("An exception was thrown: \(exception)");
+    
+finally:
+    ' do whatever...
+
+' Tuple support
+let x := (4, 3)
+let x1 := x.0
+let x2 := x.1
+
+' Still brainstorming on this... but something like:
+func map (transform :: x -> x, data :: NSArray) -> NSArray
+    var mapped := []
+    for item in data:
+        mapped.addObject(transform(item))
+    
+    return mapped
+    
+let items := ["Bob", "Frank", "Sue"]
+let transform := x => [x uppercase]
+map(tranform: transform, data: items)
+
+' This is a macro-based type system. It generates new class definitions based on
+' the type given. Potentially migrating into a generics system...
+interface Array<T>
+  def insert value:T atIndex:Int
+      assert([object isKindOfClass:T.class])
+      [super insertObject:object atIndex:atIndex]
+      
+var items := Array<Int> = []
+items <| insert:1 atIndex:0        ' if `1` is not of type `Int`, then there is a compiler warning/error.
+
+
+' Code should be safe by default, that is, one shouldn't need to worry about
+' memory allocations and all of that goodness. Of course, this is not _always_
+' true. Sometimes you need to do the unsafe stuff as well:
+
+' This gets translated into raw C code but keeps the nicer, consistent syntax.
+' Raw types are used, so don't mess up!
+unsafe func swap(x :: int*, y :: int*)
+  assert(x != nil)
+  assert(y != nil)
+
+  let temp: int = *x
+  *x = *y
+  *y = temp
+  
+' Defining the Swift enums in ObjC:
+enum CompassPoint: North | South | East | West
+  
+enum Barcode:
+  | UPCA(NSInteger, NSInteger, NSInteger, NSInteger)
+  | QRCode(NSString)
+  
+enum ASCIIControlCharacter :: NSString:
+  | Tab               := "\t"
+  | LineFeed          := "\n"
+  | CarriageReturn    := "\r"
+    
+    
+    
+    
+' echo "${INPUT_FILE_PATH}:1: error : My Message\n" 1>&2
+

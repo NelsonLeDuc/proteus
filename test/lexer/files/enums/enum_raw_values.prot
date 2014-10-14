@@ -1,0 +1,4 @@
+enum ASCIIControlCharacter :: NSString:
+  | Tab := "\t"
+  | LineFeed := "\n"
+  | CarriageReturn := "\r"

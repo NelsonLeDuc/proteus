@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D2093AB19EC4D350025BA1B /* analyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093A919EC4D350025BA1B /* analyzer.swift */; };
+		7D2093AC19EC4D350025BA1B /* lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093AA19EC4D350025BA1B /* lexer.swift */; };
+		7D2093AE19EC4F270025BA1B /* analyzer_enum_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093AD19EC4F270025BA1B /* analyzer_enum_tests.swift */; };
+		7D2093AF19EC4F310025BA1B /* analyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093A919EC4D350025BA1B /* analyzer.swift */; };
+		7D2093B019EC4F310025BA1B /* lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093AA19EC4D350025BA1B /* lexer.swift */; };
+		7D2093B219EC5ED80025BA1B /* rewriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093B119EC5ED80025BA1B /* rewriter.swift */; };
+		7D2093B319EC5EDA0025BA1B /* rewriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093B119EC5ED80025BA1B /* rewriter.swift */; };
+		7D2093B619EC8B1D0025BA1B /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093B519EC8B1D0025BA1B /* enum.swift */; };
+		7D2093B819ECB8EF0025BA1B /* rewriter_enum_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093B719ECB8EF0025BA1B /* rewriter_enum_tests.swift */; };
+		7D2093BB19ECB92E0025BA1B /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093B919ECB91F0025BA1B /* utilities.swift */; };
+		7D2093BF19ECBAA10025BA1B /* enum_basic_singleline.h_prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D2093BD19ECB9EA0025BA1B /* enum_basic_singleline.h_prot */; };
+		7D2093C119ECBC7D0025BA1B /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093B519EC8B1D0025BA1B /* enum.swift */; };
+		7D2093C219ECBD2F0025BA1B /* enum_basic_singleline.m_prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D2093BE19ECBA790025BA1B /* enum_basic_singleline.m_prot */; };
+		7D301E1219ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D301E1119ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot */; };
+		7D301E1719ECD35D000E2218 /* enum_basic_singleline_e_missing_colon.prot in Copy Enums */ = {isa = PBXBuildFile; fileRef = 7D301E1119ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot */; };
+		7D301E1819ECD35D000E2218 /* enum_associated_values.prot in Copy Enums */ = {isa = PBXBuildFile; fileRef = 7D311FA719EB0B0A00D60821 /* enum_associated_values.prot */; };
+		7D301E1919ECD35D000E2218 /* enum_basic_multiline.prot in Copy Enums */ = {isa = PBXBuildFile; fileRef = 7D311FA819EB0B0A00D60821 /* enum_basic_multiline.prot */; };
+		7D301E1A19ECD35D000E2218 /* enum_basic_singleline.prot in Copy Enums */ = {isa = PBXBuildFile; fileRef = 7D311FA919EB0B0A00D60821 /* enum_basic_singleline.prot */; };
+		7D301E1B19ECD35D000E2218 /* enum_raw_values.prot in Copy Enums */ = {isa = PBXBuildFile; fileRef = 7D311FAA19EB0B0A00D60821 /* enum_raw_values.prot */; };
+		7D311F8C19EB091300D60821 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D311F8B19EB091300D60821 /* main.swift */; };
+		7D311FAC19EB0B0A00D60821 /* enum_associated_values.prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D311FA719EB0B0A00D60821 /* enum_associated_values.prot */; };
+		7D311FAD19EB0B0A00D60821 /* enum_basic_multiline.prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D311FA819EB0B0A00D60821 /* enum_basic_multiline.prot */; };
+		7D311FAE19EB0B0A00D60821 /* enum_basic_singleline.prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D311FA919EB0B0A00D60821 /* enum_basic_singleline.prot */; };
+		7D311FAF19EB0B0A00D60821 /* enum_raw_values.prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D311FAA19EB0B0A00D60821 /* enum_raw_values.prot */; };
+		7D311FB219EB0B4300D60821 /* lexer_enum_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D311FB119EB0B4300D60821 /* lexer_enum_tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7D301E1619ECD346000E2218 /* Copy Enums */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = files/enums;
+			dstSubfolderSpec = 7;
+			files = (
+				7D301E1719ECD35D000E2218 /* enum_basic_singleline_e_missing_colon.prot in Copy Enums */,
+				7D301E1819ECD35D000E2218 /* enum_associated_values.prot in Copy Enums */,
+				7D301E1919ECD35D000E2218 /* enum_basic_multiline.prot in Copy Enums */,
+				7D301E1A19ECD35D000E2218 /* enum_basic_singleline.prot in Copy Enums */,
+				7D301E1B19ECD35D000E2218 /* enum_raw_values.prot in Copy Enums */,
+			);
+			name = "Copy Enums";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7D2093A919EC4D350025BA1B /* analyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = analyzer.swift; sourceTree = "<group>"; };
+		7D2093AA19EC4D350025BA1B /* lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lexer.swift; sourceTree = "<group>"; };
+		7D2093AD19EC4F270025BA1B /* analyzer_enum_tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = analyzer_enum_tests.swift; sourceTree = "<group>"; };
+		7D2093B119EC5ED80025BA1B /* rewriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rewriter.swift; sourceTree = "<group>"; };
+		7D2093B519EC8B1D0025BA1B /* enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
+		7D2093B719ECB8EF0025BA1B /* rewriter_enum_tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rewriter_enum_tests.swift; sourceTree = "<group>"; };
+		7D2093B919ECB91F0025BA1B /* utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
+		7D2093BD19ECB9EA0025BA1B /* enum_basic_singleline.h_prot */ = {isa = PBXFileReference; lastKnownFileType = text; path = enum_basic_singleline.h_prot; sourceTree = "<group>"; };
+		7D2093BE19ECBA790025BA1B /* enum_basic_singleline.m_prot */ = {isa = PBXFileReference; lastKnownFileType = text; path = enum_basic_singleline.m_prot; sourceTree = "<group>"; };
+		7D301E1119ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enum_basic_singleline_e_missing_colon.prot; sourceTree = "<group>"; };
+		7D311F8819EB091300D60821 /* protc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = protc; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D311F8B19EB091300D60821 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7D311F9819EB09D000D60821 /* protc_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = protc_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D311F9B19EB09D000D60821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D311FA719EB0B0A00D60821 /* enum_associated_values.prot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enum_associated_values.prot; sourceTree = "<group>"; };
+		7D311FA819EB0B0A00D60821 /* enum_basic_multiline.prot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enum_basic_multiline.prot; sourceTree = "<group>"; };
+		7D311FA919EB0B0A00D60821 /* enum_basic_singleline.prot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enum_basic_singleline.prot; sourceTree = "<group>"; };
+		7D311FAA19EB0B0A00D60821 /* enum_raw_values.prot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enum_raw_values.prot; sourceTree = "<group>"; };
+		7D311FB119EB0B4300D60821 /* lexer_enum_tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lexer_enum_tests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D311F8519EB091300D60821 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D311F9519EB09D000D60821 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D2093B419EC8B020025BA1B /* rewriters */ = {
+			isa = PBXGroup;
+			children = (
+				7D2093B519EC8B1D0025BA1B /* enum.swift */,
+			);
+			name = rewriters;
+			sourceTree = "<group>";
+		};
+		7D301E1019ECD215000E2218 /* errors */ = {
+			isa = PBXGroup;
+			children = (
+				7D301E1119ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot */,
+			);
+			path = errors;
+			sourceTree = "<group>";
+		};
+		7D311F7F19EB091300D60821 = {
+			isa = PBXGroup;
+			children = (
+				7D311F8A19EB091300D60821 /* src */,
+				7D311F9919EB09D000D60821 /* protc_tests */,
+				7D311F8919EB091300D60821 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D311F8919EB091300D60821 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D311F8819EB091300D60821 /* protc */,
+				7D311F9819EB09D000D60821 /* protc_tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D311F8A19EB091300D60821 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7D2093B419EC8B020025BA1B /* rewriters */,
+				7D311F8B19EB091300D60821 /* main.swift */,
+				7D2093A919EC4D350025BA1B /* analyzer.swift */,
+				7D2093AA19EC4D350025BA1B /* lexer.swift */,
+				7D2093B119EC5ED80025BA1B /* rewriter.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		7D311F9919EB09D000D60821 /* protc_tests */ = {
+			isa = PBXGroup;
+			children = (
+				7D311F9A19EB09D000D60821 /* Supporting Files */,
+				7D311FA419EB0B0A00D60821 /* lexer */,
+			);
+			name = protc_tests;
+			path = test;
+			sourceTree = "<group>";
+		};
+		7D311F9A19EB09D000D60821 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D311F9B19EB09D000D60821 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D311FA419EB0B0A00D60821 /* lexer */ = {
+			isa = PBXGroup;
+			children = (
+				7D311FA519EB0B0A00D60821 /* files */,
+				7D311FB119EB0B4300D60821 /* lexer_enum_tests.swift */,
+				7D2093AD19EC4F270025BA1B /* analyzer_enum_tests.swift */,
+				7D2093B719ECB8EF0025BA1B /* rewriter_enum_tests.swift */,
+				7D2093B919ECB91F0025BA1B /* utilities.swift */,
+			);
+			path = lexer;
+			sourceTree = "<group>";
+		};
+		7D311FA519EB0B0A00D60821 /* files */ = {
+			isa = PBXGroup;
+			children = (
+				7D311FA619EB0B0A00D60821 /* enums */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
+		7D311FA619EB0B0A00D60821 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				7D301E1019ECD215000E2218 /* errors */,
+				7D311FA719EB0B0A00D60821 /* enum_associated_values.prot */,
+				7D311FA819EB0B0A00D60821 /* enum_basic_multiline.prot */,
+				7D311FA919EB0B0A00D60821 /* enum_basic_singleline.prot */,
+				7D2093BD19ECB9EA0025BA1B /* enum_basic_singleline.h_prot */,
+				7D2093BE19ECBA790025BA1B /* enum_basic_singleline.m_prot */,
+				7D311FAA19EB0B0A00D60821 /* enum_raw_values.prot */,
+			);
+			path = enums;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D311F8719EB091300D60821 /* protc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D311F8F19EB091300D60821 /* Build configuration list for PBXNativeTarget "protc" */;
+			buildPhases = (
+				7D311F8419EB091300D60821 /* Sources */,
+				7D311F8519EB091300D60821 /* Frameworks */,
+				7D301E1619ECD346000E2218 /* Copy Enums */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = protc;
+			productName = protc;
+			productReference = 7D311F8819EB091300D60821 /* protc */;
+			productType = "com.apple.product-type.tool";
+		};
+		7D311F9719EB09D000D60821 /* protc_tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D311F9E19EB09D000D60821 /* Build configuration list for PBXNativeTarget "protc_tests" */;
+			buildPhases = (
+				7D311F9419EB09D000D60821 /* Sources */,
+				7D311F9519EB09D000D60821 /* Frameworks */,
+				7D311F9619EB09D000D60821 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = protc_tests;
+			productName = protc_tests;
+			productReference = 7D311F9819EB09D000D60821 /* protc_tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D311F8019EB091300D60821 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = owensd.io;
+				TargetAttributes = {
+					7D311F8719EB091300D60821 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					7D311F9719EB09D000D60821 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 7D311F8319EB091300D60821 /* Build configuration list for PBXProject "protc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7D311F7F19EB091300D60821;
+			productRefGroup = 7D311F8919EB091300D60821 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D311F8719EB091300D60821 /* protc */,
+				7D311F9719EB09D000D60821 /* protc_tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D311F9619EB09D000D60821 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D311FAF19EB0B0A00D60821 /* enum_raw_values.prot in Resources */,
+				7D311FAE19EB0B0A00D60821 /* enum_basic_singleline.prot in Resources */,
+				7D311FAD19EB0B0A00D60821 /* enum_basic_multiline.prot in Resources */,
+				7D311FAC19EB0B0A00D60821 /* enum_associated_values.prot in Resources */,
+				7D301E1219ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot in Resources */,
+				7D2093BF19ECBAA10025BA1B /* enum_basic_singleline.h_prot in Resources */,
+				7D2093C219ECBD2F0025BA1B /* enum_basic_singleline.m_prot in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D311F8419EB091300D60821 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D311F8C19EB091300D60821 /* main.swift in Sources */,
+				7D2093B619EC8B1D0025BA1B /* enum.swift in Sources */,
+				7D2093B219EC5ED80025BA1B /* rewriter.swift in Sources */,
+				7D2093AC19EC4D350025BA1B /* lexer.swift in Sources */,
+				7D2093AB19EC4D350025BA1B /* analyzer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D311F9419EB09D000D60821 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D2093B819ECB8EF0025BA1B /* rewriter_enum_tests.swift in Sources */,
+				7D2093BB19ECB92E0025BA1B /* utilities.swift in Sources */,
+				7D2093C119ECBC7D0025BA1B /* enum.swift in Sources */,
+				7D2093AF19EC4F310025BA1B /* analyzer.swift in Sources */,
+				7D2093AE19EC4F270025BA1B /* analyzer_enum_tests.swift in Sources */,
+				7D2093B019EC4F310025BA1B /* lexer.swift in Sources */,
+				7D2093B319EC5EDA0025BA1B /* rewriter.swift in Sources */,
+				7D311FB219EB0B4300D60821 /* lexer_enum_tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7D311F8D19EB091300D60821 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D311F8E19EB091300D60821 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7D311F9019EB091300D60821 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7D311F9119EB091300D60821 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7D311F9F19EB09D000D60821 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7D311FA019EB09D000D60821 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D311F8319EB091300D60821 /* Build configuration list for PBXProject "protc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D311F8D19EB091300D60821 /* Debug */,
+				7D311F8E19EB091300D60821 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D311F8F19EB091300D60821 /* Build configuration list for PBXNativeTarget "protc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D311F9019EB091300D60821 /* Debug */,
+				7D311F9119EB091300D60821 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D311F9E19EB09D000D60821 /* Build configuration list for PBXNativeTarget "protc_tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D311F9F19EB09D000D60821 /* Debug */,
+				7D311FA019EB09D000D60821 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D311F8019EB091300D60821 /* Project object */;
+}

@@ -1,0 +1,29 @@
+#include "CompassPoint.h"
+
+#define RETURN_ENUM_INSTANCE() \
+    static CompassPoint *instance = nil;\
+    static dispatch_once_t onceToken;\
+    dispatch_once(&onceToken, ^{\
+        instance = [[CompassPoint alloc] init];\
+    });\
+    return instance;
+
+@implementation CompassPoint
+
++ (CompassPoint *)North { RETURN_ENUM_INSTANCE(); }
++ (CompassPoint *)South { RETURN_ENUM_INSTANCE(); }
++ (CompassPoint *)East { RETURN_ENUM_INSTANCE(); }
++ (CompassPoint *)West { RETURN_ENUM_INSTANCE(); }
+
++ (NSArray *)values
+{
+    static NSArray *values = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        values = @[ CompassPoint.North, CompassPoint.South, CompassPoint.East, CompassPoint.West ];
+    });
+
+    return values;
+}
+
+@end

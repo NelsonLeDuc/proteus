@@ -1,0 +1,3 @@
+enum Barcode:
+  | UPCA(numberSystem :: int, manufacturer :: int, product :: int, checkInt :: int)
+  | QRCode(code :: NSString)

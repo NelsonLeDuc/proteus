@@ -1,0 +1,10 @@
+@interface CompassPoint : NSObject
+
++ (CompassPoint *)North;
++ (CompassPoint *)South;
++ (CompassPoint *)East;
++ (CompassPoint *)West;
+
++ (NSArray *)values;
+
+@end
