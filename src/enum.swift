@@ -45,7 +45,16 @@ private func rewriteEnumToObjC(value: Enum) -> (header: String, implementation: 
     implementation += "    static NSArray *values = nil;\n"
     implementation += "    static dispatch_once_t onceToken;\n"
     implementation += "    dispatch_once(&onceToken, ^{\n"
-    implementation += "        values = @[ CompassPoint.North, CompassPoint.South, CompassPoint.East, CompassPoint.West ];\n"
+    implementation += "        values = @[ "
+
+    for (idx, option) in enumerate(value.options) {
+        implementation += "\(value.identifier).\(option.name)"
+        if (idx != value.options.count - 1) {
+            implementation += ", "
+        }
+    }
+
+    implementation += " ];\n"
     implementation += "    });\n\n"
     implementation += "    return values;\n"
     implementation += "}\n"
