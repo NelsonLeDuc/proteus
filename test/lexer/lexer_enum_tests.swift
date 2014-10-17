@@ -15,7 +15,7 @@ class lexer_enum_tests: XCTestCase {
         let content = stringForFile("enum_basic_singleline", type: "prot")
         XCTAssertNotNil(content)
 
-        let lexer = Scanner(content: content ?? "")
+        let lexer = Lexer(content: content ?? "")
 
         let first = lexer.nextToken()
         XCTAssertTrue(first.type == TokenType.Keyword)

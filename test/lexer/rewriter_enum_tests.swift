@@ -13,8 +13,8 @@ class rewriter_enum_tests: XCTestCase {
     func testAnalyzingEnumSingleLineStandardSpacing()
     {
         let path = pathForFile("enum_basic_singleline", type: "prot")
-        let header = stringForFile("enum_basic_singleline", type: "h_prot")
-        let implementation = stringForFile("enum_basic_singleline", type: "m_prot")
+        let header = stringForFile("enum_basic", type: "h_prot")
+        let implementation = stringForFile("enum_basic", type: "m_prot")
 
         let analyzer = Analyzer(path: path)
         let constructs = analyzer.analyze()

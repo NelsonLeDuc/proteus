@@ -17,9 +17,7 @@
 		7D2093B619EC8B1D0025BA1B /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093B519EC8B1D0025BA1B /* enum.swift */; };
 		7D2093B819ECB8EF0025BA1B /* rewriter_enum_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093B719ECB8EF0025BA1B /* rewriter_enum_tests.swift */; };
 		7D2093BB19ECB92E0025BA1B /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093B919ECB91F0025BA1B /* utilities.swift */; };
-		7D2093BF19ECBAA10025BA1B /* enum_basic_singleline.h_prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D2093BD19ECB9EA0025BA1B /* enum_basic_singleline.h_prot */; };
 		7D2093C119ECBC7D0025BA1B /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093B519EC8B1D0025BA1B /* enum.swift */; };
-		7D2093C219ECBD2F0025BA1B /* enum_basic_singleline.m_prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D2093BE19ECBA790025BA1B /* enum_basic_singleline.m_prot */; };
 		7D301E1219ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D301E1119ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot */; };
 		7D301E1719ECD35D000E2218 /* enum_basic_singleline_e_missing_colon.prot in Copy Enums */ = {isa = PBXBuildFile; fileRef = 7D301E1119ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot */; };
 		7D301E1819ECD35D000E2218 /* enum_associated_values.prot in Copy Enums */ = {isa = PBXBuildFile; fileRef = 7D311FA719EB0B0A00D60821 /* enum_associated_values.prot */; };
@@ -32,6 +30,8 @@
 		7D311FAE19EB0B0A00D60821 /* enum_basic_singleline.prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D311FA919EB0B0A00D60821 /* enum_basic_singleline.prot */; };
 		7D311FAF19EB0B0A00D60821 /* enum_raw_values.prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D311FAA19EB0B0A00D60821 /* enum_raw_values.prot */; };
 		7D311FB219EB0B4300D60821 /* lexer_enum_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D311FB119EB0B4300D60821 /* lexer_enum_tests.swift */; };
+		7DC6607319ED8C9300EF8F19 /* enum_basic.h_prot in Resources */ = {isa = PBXBuildFile; fileRef = 7DC6607119ED8C8B00EF8F19 /* enum_basic.h_prot */; };
+		7DC6607419ED8C9300EF8F19 /* enum_basic.m_prot in Resources */ = {isa = PBXBuildFile; fileRef = 7DC6607219ED8C8B00EF8F19 /* enum_basic.m_prot */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,8 +60,6 @@
 		7D2093B519EC8B1D0025BA1B /* enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
 		7D2093B719ECB8EF0025BA1B /* rewriter_enum_tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rewriter_enum_tests.swift; sourceTree = "<group>"; };
 		7D2093B919ECB91F0025BA1B /* utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
-		7D2093BD19ECB9EA0025BA1B /* enum_basic_singleline.h_prot */ = {isa = PBXFileReference; lastKnownFileType = text; path = enum_basic_singleline.h_prot; sourceTree = "<group>"; };
-		7D2093BE19ECBA790025BA1B /* enum_basic_singleline.m_prot */ = {isa = PBXFileReference; lastKnownFileType = text; path = enum_basic_singleline.m_prot; sourceTree = "<group>"; };
 		7D301E1119ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enum_basic_singleline_e_missing_colon.prot; sourceTree = "<group>"; };
 		7D311F8819EB091300D60821 /* protc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = protc; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D311F8B19EB091300D60821 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -72,6 +70,8 @@
 		7D311FA919EB0B0A00D60821 /* enum_basic_singleline.prot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enum_basic_singleline.prot; sourceTree = "<group>"; };
 		7D311FAA19EB0B0A00D60821 /* enum_raw_values.prot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enum_raw_values.prot; sourceTree = "<group>"; };
 		7D311FB119EB0B4300D60821 /* lexer_enum_tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lexer_enum_tests.swift; sourceTree = "<group>"; };
+		7DC6607119ED8C8B00EF8F19 /* enum_basic.h_prot */ = {isa = PBXFileReference; lastKnownFileType = text; path = enum_basic.h_prot; sourceTree = "<group>"; };
+		7DC6607219ED8C8B00EF8F19 /* enum_basic.m_prot */ = {isa = PBXFileReference; lastKnownFileType = text; path = enum_basic.m_prot; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +106,15 @@
 				7D301E1119ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot */,
 			);
 			path = errors;
+			sourceTree = "<group>";
+		};
+		7D301E2219ED7904000E2218 /* baselines */ = {
+			isa = PBXGroup;
+			children = (
+				7DC6607119ED8C8B00EF8F19 /* enum_basic.h_prot */,
+				7DC6607219ED8C8B00EF8F19 /* enum_basic.m_prot */,
+			);
+			path = baselines;
 			sourceTree = "<group>";
 		};
 		7D311F7F19EB091300D60821 = {
@@ -179,12 +188,11 @@
 		7D311FA619EB0B0A00D60821 /* enums */ = {
 			isa = PBXGroup;
 			children = (
+				7D301E2219ED7904000E2218 /* baselines */,
 				7D301E1019ECD215000E2218 /* errors */,
 				7D311FA719EB0B0A00D60821 /* enum_associated_values.prot */,
 				7D311FA819EB0B0A00D60821 /* enum_basic_multiline.prot */,
 				7D311FA919EB0B0A00D60821 /* enum_basic_singleline.prot */,
-				7D2093BD19ECB9EA0025BA1B /* enum_basic_singleline.h_prot */,
-				7D2093BE19ECBA790025BA1B /* enum_basic_singleline.m_prot */,
 				7D311FAA19EB0B0A00D60821 /* enum_raw_values.prot */,
 			);
 			path = enums;
@@ -267,13 +275,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DC6607319ED8C9300EF8F19 /* enum_basic.h_prot in Resources */,
+				7DC6607419ED8C9300EF8F19 /* enum_basic.m_prot in Resources */,
 				7D311FAF19EB0B0A00D60821 /* enum_raw_values.prot in Resources */,
 				7D311FAE19EB0B0A00D60821 /* enum_basic_singleline.prot in Resources */,
 				7D311FAD19EB0B0A00D60821 /* enum_basic_multiline.prot in Resources */,
 				7D311FAC19EB0B0A00D60821 /* enum_associated_values.prot in Resources */,
 				7D301E1219ECD215000E2218 /* enum_basic_singleline_e_missing_colon.prot in Resources */,
-				7D2093BF19ECBAA10025BA1B /* enum_basic_singleline.h_prot in Resources */,
-				7D2093C219ECBD2F0025BA1B /* enum_basic_singleline.m_prot in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

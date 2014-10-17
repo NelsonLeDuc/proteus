@@ -5,14 +5,15 @@ import Foundation
 namespace pt
 
 ' Easy way to refer to different types by a better name.
-typedef Int Number<Int32>
+type Scalar = Int
 
 ' Note that all functions actually only take a single parameter.
-' This is `main` taking a single tuple parameter.
 ' Also, all `func` definitions will be translated into blocks.
 ' Finally, `main` is treated special and will be renamed to
 ' `_ptmain` and `int main(...)` will simply call into this func.
-func main (args :: [NString]) -> Int:
+' This function as the form:
+' def func main :: [String] -> Int
+def main args:
     let retval :=
         if args.count == 0:
             for (idx, arg) in args:
@@ -52,32 +53,34 @@ interface Person:
         return "\(firstName) \(lastName)"
         
 
-let david := [[Person alloc] initWithFirstName:"David" lastName:"Owens"]
-david.friendlyName := "david@owensd.io"
+let david := Person newWithFirstName:"David" lastName:"Owens
+david.emailAddress := "david@owensd.io"
 
-[david say:"Is this better?"]
+let bob := (Person alloc) initWithFirstName:"David" lastName:"Owens"
+bob say:"Hello all the peoples!"
+
 
 ' Curried function support.
-func sum x::Int -> y::Int -> Int
+def sum x: Number -> y: Number -> Number
     return x + y
     
-let sum1 :: Int -> Int := sum(1)         ' partial function application
-let sum2 :: Int := sum1(2)
-let full :: Int := sum(3)(4)
-log("sum of 1 + 2 = \(sum2)")
+let sum1 := sum 1         ' partial function application
+let sum2 := sum1 2
+let full := sum 3 4
+log "sum of 1 + 2 = \(sum2)"
 
 ' Handle the standard NSError handling.
 ' All class-types get initialized to `nil` by default.
 var error :: NSError
-let string := [NSString stringWithContentsOfFile:"path_to_file" encoding:NSStringEncoding.UTF8 error:&error]
+let string := NSString stringWithContentsOfFile:"path_to_file" encoding:NSStringEncoding.UTF8 error:&error
 if string == nil:
-    log("Failed creating string from file: \(error)")
+    log "Failed creating string from file: \(error)"
 else:
-    log("String is valid: \(string.value)")
+    log "String is valid: \(string.value)"
     
 try:
     let items := [1, 2, 3]
-    let x := items.removeObjectAtIndex(10)
+    let x := items removeObjectAtIndex:10
     
 ' The exception value is always stored as `exception`.
 catch NSException:
@@ -91,17 +94,23 @@ let x := (4, 3)
 let x1 := x.0
 let x2 := x.1
 
-' Still brainstorming on this... but something like:
-func map (transform :: x -> x, data :: NSArray) -> NSArray
+def map :: (a -> b) -> [a] -> [b]
+def map _ [] -> return []
+def map fn (x:xs) -> return fn x : map fn xs
+
+def map transform: (x -> x) -> data: NSArray -> NSArray
+map _ [] : return []
+  | _, _  :
     var mapped := []
     for item in data:
         mapped.addObject(transform(item))
     
     return mapped
-    
+
+  
 let items := ["Bob", "Frank", "Sue"]
 let transform := x => [x uppercase]
-map(tranform: transform, data: items)
+map transform:transform data:items
 
 ' This is a macro-based type system. It generates new class definitions based on
 ' the type given. Potentially migrating into a generics system...
@@ -110,10 +119,6 @@ interface Array<T>
       assert([object isKindOfClass:T.class])
       [super insertObject:object atIndex:atIndex]
       
-var items := Array<Int> = []
-items <| insert:1 atIndex:0        ' if `1` is not of type `Int`, then there is a compiler warning/error.
-
-
 ' Code should be safe by default, that is, one shouldn't need to worry about
 ' memory allocations and all of that goodness. Of course, this is not _always_
 ' true. Sometimes you need to do the unsafe stuff as well:
@@ -145,3 +150,19 @@ enum ASCIIControlCharacter :: NSString:
     
 ' echo "${INPUT_FILE_PATH}:1: error : My Message\n" 1>&2
 
+
+'
+' let ages = [
+'     "Tim":  53,  "Angela": 54,  "Craig":   44,
+'     "Jony": 47,  "Chris":  37,  "Michael": 34,
+' ]
+' 
+' let people = sorted(ages.keys, <).filter { ages[$0]! < 50 }
+
+'
+let ages = {
+    "Tim":  53,  "Angela": 54,  "Craig":   44,
+    "Jony": 47,  "Chris":  37,  "Michael": 34,
+}
+
+let people = filter (key -> ages[key] < 50) (sort < (ages allKeys))

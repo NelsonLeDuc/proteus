@@ -36,7 +36,7 @@ public class Enum : Construct {
 
 public class Analyzer {
     private let path: String
-    private var keywords: [String:(token:Token, lexer:Scanner) -> Construct?] = [:]
+    private var keywords: [String:(token:Token, lexer:Lexer) -> Construct?] = [:]
     private var errorMessages: [String] = []
 
     public var errors: [String] { get { return self.errorMessages } }
@@ -51,11 +51,11 @@ public class Analyzer {
     {
         let code = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
         if let code = code {
-            let lexer = Scanner(content: code)
+            let lexer = Lexer(content: code)
             return parse(lexer)
         }
 
-        error("file not found.", path: path, position: FilePosition(lineNumber: 0, column: 0))
+        error("file not found.", path: path, position: FilePosition(lineNumber: 0, numberOfTabs: 0, numberOfSpaces: 0))
         return []
     }
 
@@ -65,7 +65,7 @@ public class Analyzer {
         errorMessages.append(output)
     }
 
-    private func parse(lexer: Scanner) -> [Construct] {
+    private func parse(lexer: Lexer) -> [Construct] {
         var constructs = [Construct]()
         
         for token in lexer {
@@ -84,7 +84,7 @@ public class Analyzer {
         return constructs
     }
 
-    private func parseEnum(token: Token, lexer: Scanner) -> Construct? {
+    private func parseEnum(token: Token, lexer: Lexer) -> Construct? {
         let nameToken = lexer.nextToken()
         if nameToken.type != .Identifier {
             error("Expected name for enum.", path: self.path, position: nameToken.position)
