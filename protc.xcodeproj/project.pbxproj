@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		395BEAEE1A3423280022EC40 /* PTCAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 395BEAED1A3423280022EC40 /* PTCAnalyzer.m */; };
+		395BEAF21A3428350022EC40 /* PTCEnumOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 395BEAF11A3428350022EC40 /* PTCEnumOption.m */; };
+		395BEAF61A34286E0022EC40 /* PTCEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 395BEAF51A34286E0022EC40 /* PTCEnum.m */; };
+		395BEAF91A3428CE0022EC40 /* PTCFilePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 395BEAF81A3428CE0022EC40 /* PTCFilePosition.m */; };
+		395BEAFD1A3429C60022EC40 /* PTCToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 395BEAFC1A3429C60022EC40 /* PTCToken.m */; };
+		395BEB001A342AC20022EC40 /* PTCStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 395BEAFF1A342AC20022EC40 /* PTCStream.m */; };
+		395BEB031A342D8F0022EC40 /* PTCLexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 395BEB021A342D8F0022EC40 /* PTCLexer.m */; };
+		39980F0E1A40F8F400ABA48B /* PTCRewriterProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 39980F0D1A40F8F400ABA48B /* PTCRewriterProvider.m */; };
+		39980F131A40FA8600ABA48B /* PTCEnumRewriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39980F121A40FA8600ABA48B /* PTCEnumRewriter.m */; };
+		39980F2A1A4106A500ABA48B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39980F281A41033F00ABA48B /* main.m */; };
 		7D2093AB19EC4D350025BA1B /* analyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093A919EC4D350025BA1B /* analyzer.swift */; };
 		7D2093AC19EC4D350025BA1B /* lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093AA19EC4D350025BA1B /* lexer.swift */; };
 		7D2093AE19EC4F270025BA1B /* analyzer_enum_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2093AD19EC4F270025BA1B /* analyzer_enum_tests.swift */; };
@@ -24,7 +34,6 @@
 		7D301E1919ECD35D000E2218 /* enum_basic_multiline.prot in Copy Enums */ = {isa = PBXBuildFile; fileRef = 7D311FA819EB0B0A00D60821 /* enum_basic_multiline.prot */; };
 		7D301E1A19ECD35D000E2218 /* enum_basic_singleline.prot in Copy Enums */ = {isa = PBXBuildFile; fileRef = 7D311FA919EB0B0A00D60821 /* enum_basic_singleline.prot */; };
 		7D301E1B19ECD35D000E2218 /* enum_raw_values.prot in Copy Enums */ = {isa = PBXBuildFile; fileRef = 7D311FAA19EB0B0A00D60821 /* enum_raw_values.prot */; };
-		7D311F8C19EB091300D60821 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D311F8B19EB091300D60821 /* main.swift */; };
 		7D311FAC19EB0B0A00D60821 /* enum_associated_values.prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D311FA719EB0B0A00D60821 /* enum_associated_values.prot */; };
 		7D311FAD19EB0B0A00D60821 /* enum_basic_multiline.prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D311FA819EB0B0A00D60821 /* enum_basic_multiline.prot */; };
 		7D311FAE19EB0B0A00D60821 /* enum_basic_singleline.prot in Resources */ = {isa = PBXBuildFile; fileRef = 7D311FA919EB0B0A00D60821 /* enum_basic_singleline.prot */; };
@@ -53,6 +62,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		395BEAE81A3420D70022EC40 /* protc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "protc-Bridging-Header.h"; sourceTree = "<group>"; };
+		395BEAEC1A3423280022EC40 /* PTCAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCAnalyzer.h; sourceTree = "<group>"; };
+		395BEAED1A3423280022EC40 /* PTCAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCAnalyzer.m; sourceTree = "<group>"; };
+		395BEAF01A3428350022EC40 /* PTCEnumOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCEnumOption.h; sourceTree = "<group>"; };
+		395BEAF11A3428350022EC40 /* PTCEnumOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCEnumOption.m; sourceTree = "<group>"; };
+		395BEAF31A3428550022EC40 /* PTCConstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCConstruct.h; sourceTree = "<group>"; };
+		395BEAF41A34286E0022EC40 /* PTCEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCEnum.h; sourceTree = "<group>"; };
+		395BEAF51A34286E0022EC40 /* PTCEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCEnum.m; sourceTree = "<group>"; };
+		395BEAF71A3428CE0022EC40 /* PTCFilePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCFilePosition.h; sourceTree = "<group>"; };
+		395BEAF81A3428CE0022EC40 /* PTCFilePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCFilePosition.m; sourceTree = "<group>"; };
+		395BEAFA1A3429690022EC40 /* PTCTokenType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTCTokenType.h; sourceTree = "<group>"; };
+		395BEAFB1A3429C60022EC40 /* PTCToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCToken.h; sourceTree = "<group>"; };
+		395BEAFC1A3429C60022EC40 /* PTCToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCToken.m; sourceTree = "<group>"; };
+		395BEAFE1A342AC20022EC40 /* PTCStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCStream.h; sourceTree = "<group>"; };
+		395BEAFF1A342AC20022EC40 /* PTCStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCStream.m; sourceTree = "<group>"; };
+		395BEB011A342D8F0022EC40 /* PTCLexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCLexer.h; sourceTree = "<group>"; };
+		395BEB021A342D8F0022EC40 /* PTCLexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCLexer.m; sourceTree = "<group>"; };
+		39980F0C1A40F8F400ABA48B /* PTCRewriterProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCRewriterProvider.h; sourceTree = "<group>"; };
+		39980F0D1A40F8F400ABA48B /* PTCRewriterProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCRewriterProvider.m; sourceTree = "<group>"; };
+		39980F111A40FA8600ABA48B /* PTCEnumRewriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCEnumRewriter.h; sourceTree = "<group>"; };
+		39980F121A40FA8600ABA48B /* PTCEnumRewriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCEnumRewriter.m; sourceTree = "<group>"; };
+		39980F141A40FB2400ABA48B /* PTCRewriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCRewriter.h; sourceTree = "<group>"; };
+		39980F281A41033F00ABA48B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D2093A919EC4D350025BA1B /* analyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = analyzer.swift; sourceTree = "<group>"; };
 		7D2093AA19EC4D350025BA1B /* lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lexer.swift; sourceTree = "<group>"; };
 		7D2093AD19EC4F270025BA1B /* analyzer_enum_tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = analyzer_enum_tests.swift; sourceTree = "<group>"; };
@@ -92,6 +124,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		395BEAEF1A3427AB0022EC40 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				39980F281A41033F00ABA48B /* main.m */,
+				39980F0F1A40FA6D00ABA48B /* Rewriters */,
+				39980F0B1A40F83E00ABA48B /* Analyzer */,
+				39980F0A1A40F83B00ABA48B /* Lexer */,
+				39980F0C1A40F8F400ABA48B /* PTCRewriterProvider.h */,
+				39980F0D1A40F8F400ABA48B /* PTCRewriterProvider.m */,
+			);
+			name = ObjC;
+			sourceTree = "<group>";
+		};
+		39980F0A1A40F83B00ABA48B /* Lexer */ = {
+			isa = PBXGroup;
+			children = (
+				395BEAF71A3428CE0022EC40 /* PTCFilePosition.h */,
+				395BEAF81A3428CE0022EC40 /* PTCFilePosition.m */,
+				395BEAFA1A3429690022EC40 /* PTCTokenType.h */,
+				395BEAFB1A3429C60022EC40 /* PTCToken.h */,
+				395BEAFC1A3429C60022EC40 /* PTCToken.m */,
+				395BEAFE1A342AC20022EC40 /* PTCStream.h */,
+				395BEAFF1A342AC20022EC40 /* PTCStream.m */,
+				395BEB011A342D8F0022EC40 /* PTCLexer.h */,
+				395BEB021A342D8F0022EC40 /* PTCLexer.m */,
+			);
+			name = Lexer;
+			sourceTree = "<group>";
+		};
+		39980F0B1A40F83E00ABA48B /* Analyzer */ = {
+			isa = PBXGroup;
+			children = (
+				395BEAEC1A3423280022EC40 /* PTCAnalyzer.h */,
+				395BEAED1A3423280022EC40 /* PTCAnalyzer.m */,
+				395BEAF01A3428350022EC40 /* PTCEnumOption.h */,
+				395BEAF11A3428350022EC40 /* PTCEnumOption.m */,
+				395BEAF31A3428550022EC40 /* PTCConstruct.h */,
+				395BEAF41A34286E0022EC40 /* PTCEnum.h */,
+				395BEAF51A34286E0022EC40 /* PTCEnum.m */,
+			);
+			name = Analyzer;
+			sourceTree = "<group>";
+		};
+		39980F0F1A40FA6D00ABA48B /* Rewriters */ = {
+			isa = PBXGroup;
+			children = (
+				39980F111A40FA8600ABA48B /* PTCEnumRewriter.h */,
+				39980F121A40FA8600ABA48B /* PTCEnumRewriter.m */,
+				39980F141A40FB2400ABA48B /* PTCRewriter.h */,
+			);
+			name = Rewriters;
+			sourceTree = "<group>";
+		};
 		7D2093B419EC8B020025BA1B /* rewriters */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,8 +226,10 @@
 				7D2093B419EC8B020025BA1B /* rewriters */,
 				7D311F8B19EB091300D60821 /* main.swift */,
 				7D2093A919EC4D350025BA1B /* analyzer.swift */,
+				395BEAEF1A3427AB0022EC40 /* ObjC */,
 				7D2093AA19EC4D350025BA1B /* lexer.swift */,
 				7D2093B119EC5ED80025BA1B /* rewriter.swift */,
+				395BEAE81A3420D70022EC40 /* protc-Bridging-Header.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -292,11 +379,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D311F8C19EB091300D60821 /* main.swift in Sources */,
+				395BEAF61A34286E0022EC40 /* PTCEnum.m in Sources */,
 				7D2093B619EC8B1D0025BA1B /* enum.swift in Sources */,
+				395BEB001A342AC20022EC40 /* PTCStream.m in Sources */,
 				7D2093B219EC5ED80025BA1B /* rewriter.swift in Sources */,
+				395BEAF91A3428CE0022EC40 /* PTCFilePosition.m in Sources */,
 				7D2093AC19EC4D350025BA1B /* lexer.swift in Sources */,
 				7D2093AB19EC4D350025BA1B /* analyzer.swift in Sources */,
+				39980F0E1A40F8F400ABA48B /* PTCRewriterProvider.m in Sources */,
+				395BEB031A342D8F0022EC40 /* PTCLexer.m in Sources */,
+				395BEAF21A3428350022EC40 /* PTCEnumOption.m in Sources */,
+				395BEAEE1A3423280022EC40 /* PTCAnalyzer.m in Sources */,
+				39980F131A40FA8600ABA48B /* PTCEnumRewriter.m in Sources */,
+				39980F2A1A4106A500ABA48B /* main.m in Sources */,
+				395BEAFD1A3429C60022EC40 /* PTCToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,14 +492,21 @@
 		7D311F9019EB091300D60821 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "src/protc-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7D311F9119EB091300D60821 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "src/protc-Bridging-Header.h";
 			};
 			name = Release;
 		};
